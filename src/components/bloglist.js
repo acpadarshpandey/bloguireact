@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Card from "bootstrap/dist/css/bootstrap.min.css";
 
 
 
@@ -21,9 +22,9 @@ export default class BlogsList extends Component {
         this.state = {BlogList: []};
     }
     componentDidMount() {
-        axios.get('http://localhost:4000/')
+        axios.get('https://blog-backends.herokuapp.com/')
             .then(response => {
-                this.setState({ BlogList: response.data });
+                this.setState({ BlogList: response.data.BlogList });
             })
             .catch(function (error){
                 console.log(error);
@@ -35,12 +36,7 @@ export default class BlogsList extends Component {
             return <Blog Post={currentBlog} key={i} />;
         })
     }
-    // blogList() {
-    //       let arr=[];
-    //     this.state.BlogList.map(function(currentBlog, i){
-    //         arr.push(<Blog Post={currentBlog} key={i} />
-    //         )
-    //     })
+  
     
         
         
@@ -58,8 +54,8 @@ export default class BlogsList extends Component {
               <Card.Link href="#">Another Link</Card.Link>
             </Card.Body>
           </Card> */}
-         <div>{this.blogList}</div>
-         <div>this is me</div>
+         <div>{this.blogList()}</div>
+
          
         </div>
         

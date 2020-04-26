@@ -45,7 +45,7 @@ export default class CreateBlog extends Component {
         
         };
 
-        axios.post('http://localhost:4000/createBlog', newBlog)
+        axios.post('https://blog-backends.herokuapp.com/createBlog', newBlog)
             .then(res => console.log(res.data));
         
         this.setState({

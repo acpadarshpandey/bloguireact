@@ -46,7 +46,7 @@ export default class Signup extends Component {
         
         };
 
-        axios.post('http://localhost:4000/signup', newUser)
+        axios.post('https://blog-backends.herokuapp.com/signup', newUser)
             .then(res => console.log(res.data));
         
         this.setState({
