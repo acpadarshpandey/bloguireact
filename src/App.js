@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import CreateBlog from "./components/createBlog";
 import editBlog from "./components/editBlog";
 import Blogslist from "./components/bloglist";
