@@ -31,10 +31,12 @@ export default class BlogsLists extends Component {
                       <p class="card-text">{blog.Blog}</p>
                       <button onClick={()=>{
                           const id=blog._id;
-                          axios.delete(`https://blog-backends.herokuapp.com/${id}`) .then(() => 
-                          {console.log("done")
-                        
+                          axios.delete(`https://blog-backends.herokuapp.com/blogDelete/${id}`)
+                        .then(() => 
+                          { console.log("deletion done")
+                    
                            })
+                        
                       }}> Delete</button>
                       
                     </div>
