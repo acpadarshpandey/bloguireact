@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CreateBlog from "./components/createBlog";
 import editBlog from "./components/editBlog";
 import Blogslist from "./components/bloglist";
-import SignUp from "./components/signup"
+import Delete from "./components/delete"
 
 class App extends Component {
   render() {
@@ -21,12 +21,7 @@ class App extends Component {
                 <li className="navbar-item">
                   <Link to="/create" className="nav-link">Create Blog</Link>
                 </li>
-                <li className="navbar-item"> 
-                <Link to="/signup" className="nav-link">SignUp</Link>
-                </li>
-                <li className="navbar-item"> 
-                <Link to="/autentication" className="nav-link">SignIn</Link>
-                </li>
+               
               </ul>
             </div>
           </nav>
@@ -34,7 +29,7 @@ class App extends Component {
           <Route path="/" exact component={Blogslist} />
           <Route path="/edit/:id" component={editBlog} />
           <Route path="/create" component={CreateBlog} />
-          <Route path="/signup" component={SignUp}/>
+          <Route path="/delete" component={Delete}/>
         </div>
       </Router>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Link} from "react-router-dom"
 
 
 
@@ -29,7 +30,7 @@ export default class BlogsLists extends Component {
                       <h5 class="card-title">Blogs</h5>
                       <h6 class="card-subtitle mb-2 text-muted">{blog.Author}</h6>
                       <p class="card-text">{blog.Blog}</p>
-                      <button onClick={()=>{
+                      <Link to="/delete">      <button onClick={()=>{
                           const id=blog._id;
                           axios.delete(`https://blog-backends.herokuapp.com/blogDelete/${id}`)
                         .then(() => 
@@ -37,7 +38,7 @@ export default class BlogsLists extends Component {
                     
                            })
                         
-                      }}> Delete</button>
+                      }}>  Delete </button> </Link>
                       
                     </div>
                   </div>
